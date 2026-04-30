@@ -1,0 +1,11 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="8.5150979999993">
+<testsuite name="saucedemo\login-page.spec.ts" timestamp="2026-04-30T00:47:20.724Z" hostname="" tests="1" failures="0" skipped="0" time="4.854" errors="0">
+<testcase name="SauceDemo Login › should show an error with invalid credentials" classname="saucedemo\login-page.spec.ts" time="4.854">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\saucedemo-login-page-Sauce-47c65-or-with-invalid-credentials\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
