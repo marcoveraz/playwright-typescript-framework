@@ -4,16 +4,20 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-Framework-blue?style=for-the-badge&logo=typescript)
 ![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
-**Created by Marco Adán Vera Zboralski**  
-🔗 [LinkedIn Profile](https://www.linkedin.com/in/marco-adan-vera/)
+## 👨‍💻 Author
+
+Marco Adán Vera Zboralski  
+Senior QA Automation Engineer  
+
+[LinkedIn](https://www.linkedin.com/in/marco-adan-vera/)
 
 ---
 
 ## 💡 Overview
 
-This repository demonstrates a modern UI automation framework built with **Playwright** and **TypeScript**.
+This project demonstrates a scalable UI automation framework built with Playwright and TypeScript.
 
-It is designed with scalability, maintainability, and real-world team usage in mind, enabling better test coverage and reliability across environments.
+It follows real-world best practices such as Page Object Model (POM), multi-environment configuration, and reusable components to ensure maintainability and reliability.
 
 ---
 
