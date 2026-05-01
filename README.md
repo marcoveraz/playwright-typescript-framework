@@ -7,7 +7,7 @@
 ## 👨‍💻 Author
 
 Marco Adán Vera Zboralski  
-Senior QA Automation Engineer  
+Senior QA Automation Engineer
 
 [LinkedIn](https://www.linkedin.com/in/marco-adan-vera/)
 
