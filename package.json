@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "allure:serve": "allure serve allure-results",
+    "allure:generate": "allure generate allure-results -o allure-report --clean",
+    "allure:open": "allure open allure-report"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +16,8 @@
   "devDependencies": {
     "@playwright/test": "^1.59.1",
     "@types/node": "^25.6.0",
+    "allure-commandline": "^2.40.0",
+    "allure-playwright": "^3.7.2",
     "prettier": "^3.8.3"
   }
 }

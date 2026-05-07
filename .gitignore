@@ -1,5 +1,6 @@
 
 # Playwright
+results.xml
 node_modules/
 /test-results/
 /playwright-report/
