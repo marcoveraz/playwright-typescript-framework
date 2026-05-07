@@ -37,13 +37,22 @@ This project follows a scalable and maintainable automation architecture:
 
 ```
 project-root/
-├── config/              # Environment and test configuration
-├── models/              # Data models and interfaces
-├── pages/               # Page Object Model classes
-├── tests/               # Test specifications
-├── utils/               # Utility functions and helpers
-├── test-results/        # Test execution artifacts
-└── playwright-report/   # HTML report output
+│── src/
+│   ├── api/                 # API clients, services, payloads, and schemas
+│   ├── config/              # Environment and framework configuration
+│   ├── fixtures/            # Playwright fixtures and shared setup
+│   ├── models/              # Data models and interfaces
+│   ├── pages/               # Page Object Model classes
+│   ├── utils/               # Utility functions and helpers
+│
+│── tests/
+│   ├── ui/                  # UI test specifications
+│   └── api/                 # API test specifications
+│
+│── test-results/            # Test execution artifacts
+│── playwright-report/       # Playwright HTML reports
+│── allure-results/          # Allure raw results
+│── allure-report/           # Allure generated reports
 ```
 
 ---
@@ -171,8 +180,6 @@ ENV=prod npx playwright test tests/saucedemo/checkout.spec.ts
 ---
 
 ## 📦 NPM Scripts
-
-Add these scripts to your `package.json`:
 
 ```json
 {
