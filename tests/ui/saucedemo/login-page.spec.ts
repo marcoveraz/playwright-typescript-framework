@@ -1,6 +1,6 @@
-import { test, expect } from '../../fixtures/saucedemo/pages.fixture';
-import { global } from '../../config/saucedemo/globals';
-import { currentEnv } from '../../config/saucedemo/env';
+import { test, expect } from '../../../src/fixtures/saucedemo/pages.fixture';
+import { global } from '../../../src/config/saucedemo/globals';
+import { currentEnv } from '../../../src/config/saucedemo/env';
 
 test.describe('SauceDemo Login', () => {
   test.beforeEach(async ({ loginPage }) => {

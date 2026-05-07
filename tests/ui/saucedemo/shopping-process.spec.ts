@@ -1,9 +1,9 @@
-import { test, expect } from '../../fixtures/saucedemo/auth.fixture';
-import { currentEnv } from '../../config/saucedemo/env';
-import { global } from '../../config/saucedemo/globals';
-import { WaitUtils } from '../../utils/WaitUtils';
-import { Utils } from '../../utils/Utils';
-import { ProductUtils } from '../../utils/ProductUtils';
+import { test, expect } from '../../../src/fixtures/saucedemo/auth.fixture';
+import { currentEnv } from '../../../src/config/saucedemo/env';
+import { global } from '../../../src/config/saucedemo/globals';
+import { WaitUtils } from '../../../src/utils/WaitUtils';
+import { Utils } from '../../../src/utils/Utils';
+import { ProductUtils } from '../../../src/utils/ProductUtils';
 
 test.describe('Checkout flow', () => {
   test('should complete a purchase successfully', async ({
