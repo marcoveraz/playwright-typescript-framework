@@ -5,9 +5,16 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --write .",
-    "allure:serve": "allure serve allure-results",
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:dev": "cross-env ENV=dev npx playwright test",
+    "test:qa": "cross-env ENV=qa npx playwright test",
+    "test:stage": "cross-env ENV=stage npx playwright test",
+    "test:prod": "cross-env ENV=prod npx playwright test",
+    "report:playwright": "npx playwright show-report",
     "allure:generate": "allure generate allure-results -o allure-report --clean",
-    "allure:open": "allure open allure-report"
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +25,7 @@
     "@types/node": "^25.6.0",
     "allure-commandline": "^2.40.0",
     "allure-playwright": "^3.7.2",
+    "cross-env": "^10.1.0",
     "prettier": "^3.8.3"
   }
 }

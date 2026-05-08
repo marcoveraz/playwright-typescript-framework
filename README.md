@@ -181,36 +181,21 @@ ENV=prod npx playwright test tests/saucedemo/checkout.spec.ts
 
 ## 📦 NPM Scripts
 
-```json
-{
-  "scripts": {
-    "test:dev": "ENV=dev npx playwright test",
-    "test:qa": "ENV=qa npx playwright test",
-    "test:stage": "ENV=stage npx playwright test",
-    "test:prod": "ENV=prod npx playwright test",
-    "test:headed": "npx playwright test --headed",
-    "test:report": "npx playwright show-report"
-  }
-}
-```
+Common scripts are defined in `package.json`.
 
-### Using NPM Scripts
+Examples:
 
 ```bash
-# Run QA tests
+npm run test
+npm run test:dev
 npm run test:qa
-
-# Run specific test by name
-npm run test:qa -- -g "checkout"
-
-# Run in headed mode
-npm run test:qa -- --headed
-
-# View HTML report
-npm run test:report
+npm run test:stage
+npm run test:prod
+npm run test:headed
+npm run report:playwright
 ```
 
----
+> Environment-specific scripts use `cross-env` to support Windows, macOS, Linux, and CI/CD environments.
 
 ## 📊 Reports & Artifacts
 
@@ -224,8 +209,8 @@ npx playwright show-report
 
 ```
 test-results/
-├── videos/      # .webm video recordings
-├── traces/      # Playwright trace files
+├── videos/ # .webm video recordings
+├── traces/ # Playwright trace files
 └── screenshots/ # Failure screenshots
 ```
 
@@ -234,42 +219,6 @@ test-results/
 ```bash
 # Open trace viewer
 npx playwright show-trace test-results/traces/trace.zip
-```
-
----
-
-## 🔧 Configuration
-
-### playwright.config.ts Example
-
-```typescript
-import { defineConfig } from '@playwright/test';
-
-export default defineConfig({
-  testDir: './tests',
-  timeout: 30000,
-  retries: 2,
-  use: {
-    baseURL: currentEnv.baseURL,
-    screenshot: 'only-on-failure',
-    video: 'on',
-    trace: 'on-first-retry',
-  },
-  projects: [
-    {
-      name: 'chromium',
-      use: { browserName: 'chromium' },
-    },
-    {
-      name: 'firefox',
-      use: { browserName: 'firefox' },
-    },
-    {
-      name: 'webkit',
-      use: { browserName: 'webkit' },
-    },
-  ],
-});
 ```
 
 ---
@@ -286,22 +235,6 @@ export default defineConfig({
 ## 🤝 Contributing
 
 Contributions are welcome! This project is intended to grow with additional real-world test scenarios.
-
-### How to Contribute
-
-```bash
-# Fork the repository
-# Create your feature branch
-git checkout -b feature/new-test-scenario
-
-# Commit your changes
-git commit -m "Add new test scenario for checkout flow"
-
-# Push to the branch
-git push origin feature/new-test-scenario
-
-# Open a Pull Request
-```
 
 **You can:**
 
@@ -329,5 +262,5 @@ This project is open source and available under the MIT License.
 
 ## 📞 Contact
 
-**Marco Adán Vera Zboralski**  
+**Marco Adán Vera Zboralski**
 🔗 [LinkedIn](https://www.linkedin.com/in/marco-adan-vera/)
